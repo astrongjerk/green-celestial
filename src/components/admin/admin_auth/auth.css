@@ -1,0 +1,204 @@
+*{
+    font-family: "Montserrat", sans-serif;
+    transition: all ease 0.5s;
+    /* outline: 1px solid black; */
+}
+
+@keyframes color_shift {
+    0%{
+        color: var(--s-green);
+    }
+
+    50%{
+        color: var(--hard-green);
+    }
+
+    100%{
+        color: var(--s-green);
+    }
+}
+
+
+.auth{
+    width: 100%;
+    height: 100vh;
+    float: left;
+    background-color: var(--background);
+    display: grid;
+    place-items: center;
+    align-content: center;
+    position: relative;
+
+}
+
+.float_window{
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 80%;
+    min-height: 50px;
+    border-radius: 8px;
+    background-color: green;
+    text-align: center;
+    color: var(--background);
+    opacity: 0;
+    transition: all ease 2s;
+}
+
+.view{
+    opacity: 1!important;
+}
+
+.float_window > p {
+    padding: 5px 0px ;
+}
+
+.auth_inner{
+    width: 70%;
+    height: 700px;
+    background-color : white ;
+    border-radius: 12px;
+    position: relative;
+}
+
+.float_para{
+    position: absolute;
+    height: 700px;
+    width: 50%;
+    top: 0;
+    /* left: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background);
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--s-green);
+    border-radius: 12px;
+}
+
+.float_para > h2{
+    padding: 0px 10px;
+}
+
+.float_para > p {
+    margin-top: 15px;
+    padding: 0px 5px;
+}
+
+.auth_left{
+    width: 50%;
+    height: 700px;
+    float: left;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.left_content{
+    width: 95%;
+    height: 650px;
+    margin: 25px 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left_content > h2 {
+    text-align: center;
+    font-size: xx-large;
+    animation: color_shift 2.5s linear infinite;
+    margin-bottom: 25px;
+}
+
+.left_content > form > label{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: large;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.left_content > form > label > img{
+    height: 20px;
+    margin-right: 5px;
+}
+
+.left_content > form > input{
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    border: none;
+    outline: 3px solid rgb(178, 178, 178);
+    font-size: large;
+    border-radius: 4px;
+}
+
+.left_content > form > input:focus{
+    outline: 3px solid rgb(93, 93, 93);
+}
+
+.left_content > form > button{
+    width: 100%;
+    background-color: var(--s-green);
+    padding: 12px 16px;
+    font-size: large;
+    color: var(--background);
+    border-radius: 4px;
+    margin: 15px 0;
+    border: none;
+}
+
+.left_content > form > button:hover{
+    font-weight: 600;
+    background-color: var(--hard-green);
+}
+
+.auth_right{
+    width: 50%;
+    height: 700px;
+    float: right;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+
+@media screen and (min-width : 320px) and (max-width:750px) {
+
+    .auth_inner{
+        height: 80vh;
+    }
+
+    .float_para{
+        display: none;
+    }
+
+    .auth_left{
+        width: 100%;
+        height: 100%;
+    }
+
+    .auth_right{
+        width: 100%;
+        height: 100%;
+    }
+
+    .left_content{
+        height: calc(100% - 50px);
+    }
+
+    .left_content > form > label{
+        font-size: medium;
+    }
+
+    .left_content > form > label > img{
+        height: 15px;
+    }
+
+    .left_content > form > button{
+        padding: 8px 12px;
+    }
+
+
+}
+

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --background : whitesmoke;
+    --hard-green : #1c2a18;
+    --s-green : #006600;
+    --hard-blue : #6eea8e;
+    /* --hard-blue : blue; */
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* outline: 1px solid black; */
+}
+
+body{
+    overflow-x: hidden;
+}
